@@ -1,7 +1,7 @@
 #! /home/rails/.rvm/rubies/ruby-2.3.1/bin/ruby
 def double (test)
-	for i in 1...test.length
-		if #{test[i]} ==/[0-9]/  
+	test.each do |i|
+		if /[[:digit:]]/.match("#{i}")
 			doub=2*i
 			puts "#{doub}"
 		end
